@@ -30,3 +30,25 @@
 - [x] Forms rendered via crispy
 - [ ] Improved UI/UX
 - [ ] Drag & Drop
+
+## Running Locally
+
+Steps to run the Django-based project:
+```
+git clone https://github.com/vladyslavnUA/archRack archrack && cd archrack
+
+# create a virtual environment
+virtualenv env
+source env/bin/activate
+
+# install dependancies
+pip install -r requirements.txt
+
+# run migrations to create db
+python manage.py migrate
+
+# run the server
+python manage.py runserver      
+
+# head to http://localhost:8000/
+```
