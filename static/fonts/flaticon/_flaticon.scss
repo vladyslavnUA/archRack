@@ -1,0 +1,116 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 04/02/2020 00:17
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-qr-code:before { content: "\f100"; }
+.flaticon-clean:before { content: "\f101"; }
+.flaticon-analysis:before { content: "\f102"; }
+.flaticon-analytics:before { content: "\f103"; }
+.flaticon-file:before { content: "\f104"; }
+.flaticon-file-1:before { content: "\f105"; }
+.flaticon-left-quote:before { content: "\f106"; }
+.flaticon-paper-plane:before { content: "\f107"; }
+.flaticon-requirement:before { content: "\f108"; }
+.flaticon-search:before { content: "\f109"; }
+.flaticon-creativity:before { content: "\f10a"; }
+.flaticon-web-programming:before { content: "\f10b"; }
+.flaticon-medal:before { content: "\f10c"; }
+.flaticon-directory:before { content: "\f10d"; }
+.flaticon-value:before { content: "\f10e"; }
+.flaticon-appointment:before { content: "\f10f"; }
+.flaticon-question:before { content: "\f110"; }
+.flaticon-candidate:before { content: "\f111"; }
+.flaticon-location:before { content: "\f112"; }
+.flaticon-suitcase:before { content: "\f113"; }
+.flaticon-salesman:before { content: "\f114"; }
+.flaticon-target:before { content: "\f115"; }
+.flaticon-public-relations:before { content: "\f116"; }
+.flaticon-shopping-bag:before { content: "\f117"; }
+.flaticon-magnifying-glass:before { content: "\f118"; }
+.flaticon-shopping-basket:before { content: "\f119"; }
+.flaticon-call:before { content: "\f11a"; }
+.flaticon-location-1:before { content: "\f11b"; }
+.flaticon-email:before { content: "\f11c"; }
+.flaticon-address:before { content: "\f11d"; }
+.flaticon-burger:before { content: "\f11e"; }
+.flaticon-champagne-glass:before { content: "\f11f"; }
+.flaticon-grocery:before { content: "\f120"; }
+.flaticon-mortarboard:before { content: "\f121"; }
+.flaticon-education:before { content: "\f122"; }
+.flaticon-employee:before { content: "\f123"; }
+.flaticon-content:before { content: "\f124"; }
+.flaticon-web-development:before { content: "\f125"; }
+    
+    $font-Flaticon-qr-code: "\f100";
+    $font-Flaticon-clean: "\f101";
+    $font-Flaticon-analysis: "\f102";
+    $font-Flaticon-analytics: "\f103";
+    $font-Flaticon-file: "\f104";
+    $font-Flaticon-file-1: "\f105";
+    $font-Flaticon-left-quote: "\f106";
+    $font-Flaticon-paper-plane: "\f107";
+    $font-Flaticon-requirement: "\f108";
+    $font-Flaticon-search: "\f109";
+    $font-Flaticon-creativity: "\f10a";
+    $font-Flaticon-web-programming: "\f10b";
+    $font-Flaticon-medal: "\f10c";
+    $font-Flaticon-directory: "\f10d";
+    $font-Flaticon-value: "\f10e";
+    $font-Flaticon-appointment: "\f10f";
+    $font-Flaticon-question: "\f110";
+    $font-Flaticon-candidate: "\f111";
+    $font-Flaticon-location: "\f112";
+    $font-Flaticon-suitcase: "\f113";
+    $font-Flaticon-salesman: "\f114";
+    $font-Flaticon-target: "\f115";
+    $font-Flaticon-public-relations: "\f116";
+    $font-Flaticon-shopping-bag: "\f117";
+    $font-Flaticon-magnifying-glass: "\f118";
+    $font-Flaticon-shopping-basket: "\f119";
+    $font-Flaticon-call: "\f11a";
+    $font-Flaticon-location-1: "\f11b";
+    $font-Flaticon-email: "\f11c";
+    $font-Flaticon-address: "\f11d";
+    $font-Flaticon-burger: "\f11e";
+    $font-Flaticon-champagne-glass: "\f11f";
+    $font-Flaticon-grocery: "\f120";
+    $font-Flaticon-mortarboard: "\f121";
+    $font-Flaticon-education: "\f122";
+    $font-Flaticon-employee: "\f123";
+    $font-Flaticon-content: "\f124";
+    $font-Flaticon-web-development: "\f125";

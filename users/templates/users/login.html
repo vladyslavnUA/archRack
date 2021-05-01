@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchRack</title>
+  {% load static %}
+  <!-- Vendor Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+
+  <!-- Vidlife Style sheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+
+</head>
+
+<body class="boxed">
+
+  <!-- Main Wrapper Start -->
+  <div class="main-wrapper">
+
+    <!-- Content Start -->
+    <div class="main-content no-sidebar">
+      <div class="main-content-inner">
+
+        <!-- Login Form Start -->
+        <div class="section-padding">
+
+          <div class="auth-wrapper">
+
+            <div class="auth-description">
+              <div class="auth-description-inner">
+                <h2>Welcome Back!</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <a href="{% url 'signup' %}" class="btn-custom">Sign Up</a>
+              </div>
+            </div>
+            <div class="auth-form">
+
+              <h2 class="custom-primary">Log into Vidlife</h2>
+              {% if messages %}
+                <ul class="messages">
+                {% for message in messages %}
+                  <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+                </ul>
+              {% endif %}
+              <form method="post">{% csrf_token %}
+                
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-light" placeholder="Email" name="email" value="">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-control-light" placeholder="Password" name="password" value="">
+                </div>
+                <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                <button type="submit" class="btn-custom primary">Login</button>
+
+                <div class="auth-seperator">
+                  <span>OR</span>
+                </div>
+
+                <div class="">
+                  <button type="button" class="vl-social-login facebook"><i class="fab fa-facebook-f"></i> Continue with Facebook </button>
+                  <button type="button" class="vl-social-login google"><i class="fab fa-google"></i> Continue with Google</button>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Login Form End -->
+
+      </div>
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <!-- <footer class="footer footer-2">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-md-9">
+              <img src="https://via.placeholder.com/192x59" alt="logo">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="copyright">Made with <i class="fas fa-heart"></i> by AndromedaThemes</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="social-media">
+                <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <!-- Footer End -->
+
+  </div>
+  <!-- Main Wrapper End -->
+
+  <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+
+  <!-- Vidlife Scripts -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

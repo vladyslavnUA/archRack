@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchRack</title>
+  {% load static %}
+  <!-- Vendor Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+
+  <!-- Vidlife Style sheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon.ico' %}">
+
+</head>
+
+<body class="boxed">
+
+  <!-- Main Wrapper Start -->
+  <div class="main-wrapper">
+
+    <!-- Nav Start -->
+    {% include 'app/partials/navbar.html' %}
+    <!-- Nav End -->
+
+    <!-- Sidebar Start -->
+    {% include 'app/partials/sidebar.html' %}
+    <!-- Sidebar End -->
+
+    <!-- Content Start -->
+    <div class="main-content">
+
+      <!-- Inner Banner Start -->
+      <div class="page-subheader">
+        <div class="page-subheader-inner" style="background-image: url('https://via.placeholder.com/1920x800')"></div>
+        <div class="page-subheader-controls">
+          <div class="page-subheader-controls-inner">
+            <div class="channel-thumbnail">
+              <img src="https://via.placeholder.com/150" alt="channel">
+            </div>
+
+            <div class="page-subheader-left page-subheader-nav">
+              <ul>
+                <li> <a href="my-channel.html">Home</a> </li>
+                <li> <a href="my-channel-videos.html">Videos</a> </li>
+                <li> <a href="my-channel-playlists.html">Playlists</a> </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="my-channel-about.html"> <i class="fas fa-address-card"></i> About</a>
+                    <a class="dropdown-item" href="my-channel-subscribers.html"> <i class="fas fa-list"></i> Subscribers</a>
+                    <a class="dropdown-item" href="my-channel-watch-later.html"> <i class="fas fa-stopwatch"></i> Watch Later</a>
+                    <a class="dropdown-item" href="my-channel-history.html"> <i class="fas fa-history"></i> History</a>
+                    <a class="dropdown-item" href="my-channel-settings.html"> <i class="fas fa-cog"></i> Settings</a>
+                    <a class="dropdown-item" href="my-channel-account.html"> <i class="fas fa-user"></i> Account Management</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="page-subheader-right">
+              <ul class="social-media">
+                <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
+              </ul>
+              <a href="#" class="btn-custom secondary"> <i class="fas fa-upload"></i> Upload</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Banner End -->
+
+      <div class="main-content-inner">
+
+        <div class="section section-mobile border-0">
+
+          <div class="row">
+
+            <!-- Account Information Start -->
+            <div class="col-lg-4">
+              <div class="page-options">
+                <h3>Account Management</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+              </div>
+            </div>
+            <!-- Account Information End -->
+
+            <!-- Account Information Edit Start -->
+            <div class="col-lg-8">
+
+              <div class="card">
+                <div class="card-body">
+
+                  <div class="section-title-wrap">
+                    <h4>Basic Information</h4>
+                  </div>
+
+                  <form method="post">
+
+                    <!-- Profile img -->
+                    <div class="btn-file-upload-wrapper">
+                      <div class="user-img-upload">
+                        <div class="btn-file-upload-input">
+                          <input type="file" class="upload-input">
+                          <button type="button" class="btn-file-upload btn-custom secondary btn-icon"> <i class="fas fa-pencil-alt m-0"></i> </button>
+                        </div>
+                        <img class="img-preview" src="https://via.placeholder.com/150" alt="user">
+                      </div>
+                    </div>
+                    <!-- /Profile img -->
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Full Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="John Doe" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Username</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="john-doe88" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Email Address</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="info@john.com" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Phone</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="(478) 318 129" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">About Me</label>
+                      <div class="col-sm-9">
+                        <textarea class="form-control" rows="4" placeholder="Write something about you"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="text-right">
+                      <button type="submit" class="btn-custom" name="button">Save Changes</button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+
+              <div class="card mb-0">
+
+                <div class="card-body">
+
+                  <div class="section-title-wrap">
+                    <h4>Billing Address</h4>
+                  </div>
+
+                  <form method="post">
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Country</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="United States" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">City</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="New Jersey" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Address</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="7309 Orange Ave. Battle Ground" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Zip Code</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="7309" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Email Address</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="info@john.com" value="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Phone</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="(478) 318 129" value="">
+                      </div>
+                    </div>
+
+                    <div class="text-right">
+                      <button type="submit" class="btn-custom" name="button">Save Changes</button>
+                    </div>
+
+                  </form>
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+            <!-- Account Information Edit End -->
+
+          </div>
+
+        </div>
+
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-md-9">
+                <img src="https://via.placeholder.com/192x59" alt="logo">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copyright">Made with <i class="fas fa-heart"></i> by AndromedaThemes</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-media">
+                  <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+
+      </div>
+
+    </div>
+    <!-- Content End -->
+
+  </div>
+  <!-- Main Wrapper End -->
+
+  <!-- Vendor Scripts -->
+  <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+
+  <!-- Vidlife Scripts -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

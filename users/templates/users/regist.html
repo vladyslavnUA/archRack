@@ -1,0 +1,526 @@
+{% extends 'base.html' %}
+{% block title %}Signup | FlyHigh 🍁{% endblock %}
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+  <!-- Preloader Start -->
+  <div class="acr-preloader">
+    <img src="{% static 'img/preloader.svg' %}" alt="preloader">
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Aside (Mobile Navigation) -->
+  <aside class="main-aside">
+     <div class="aside-title">
+        <div class="aside-controls aside-trigger">
+           <h4>Merijuana</h4>
+           <div class="close-btn close-dark">
+              <span></span>
+              <span></span>
+           </div>
+        </div>
+     </div>
+     <div class="aside-scroll">
+        <ul>
+           <!-- Pages Start -->
+           <li class="menu-section-title">Pages</li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#"> Home Pages</a>
+              <ul class="submenu">
+                 <li class="menu-item"> <a href="index.html">Home v1</a> </li>
+                 <li class="menu-item"> <a href="home-v2.html">Home v2</a> </li>
+                 <li class="menu-item"> <a href="home-v3.html">Home v3</a> </li>
+                 
+              </ul>
+           </li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#">Shop</a>
+              <ul class="submenu">
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#">Shop</a>
+                    <ul class="submenu">
+                       <li class="menu-item">
+                          <a href="shop-list-v1.html">Grid View</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="shop-list-v1.html">List v1</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="shop-list-v2.html">List v2</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="shop-map.html">Shop Map</a>
+                       </li>
+                    </ul>
+                 </li>
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#">Product Details</a>
+                    <ul class="submenu">
+                       <li class="menu-item">
+                          <a href="product-details-v1.html">Product Details v1</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="product-details-v2.html">Product Details v2</a>
+                       </li>
+                    </ul>
+                 </li>
+                 <li class="menu-item">
+                    <a href="cart.html">Cart</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="checkout.html">Checkout</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="wishlist.html">Wishlist</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="compare-products.html">Compare Products</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="submit-product.html">Submit Product</a>
+                 </li>
+              </ul>
+           </li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#">Pages</a>
+              <ul class="submenu">
+                 <li class="menu-item">
+                    <a href="about-us.html">About Us</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="contact-us.html">Contact Us</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="legal.html">Legal</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="faq.html">FAQ</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="coming-soon.html">Coming Soon</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="404.html">404</a>
+                 </li>
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#">Login</a>
+                    <ul class="submenu">
+                       <li class="menu-item">
+                          <a href="login-v1.html">Login v1</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="login-v2.html">Login v2</a>
+                       </li>
+                    </ul>
+                 </li>
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#">Register</a>
+                    <ul class="submenu">
+                       <li class="menu-item">
+                          <a href="register-v1.html">Register v1</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="register-v2.html">Register v2</a>
+                       </li>
+                    </ul>
+                 </li>
+              </ul>
+           </li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#">Blog</a>
+              <ul class="submenu">
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#">Blog Archive</a>
+                    <ul class="submenu">
+                       <li class="menu-item">
+                          <a href="blog-left-sidebar.html">Left Sidebar</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="blog-right-sidebar.html">Right Sidebar</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="blog-grid.html">Grid View</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="blog-list.html">List View</a>
+                       </li>
+                    </ul>
+                 </li>
+                 <li class="menu-item">
+                    <a href="blog-single.html">Blog Single</a>
+                 </li>
+              </ul>
+           </li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#">Portfolio</a>
+              <ul class="submenu">
+                 <li class="menu-item">
+                    <a href="project-v1.html">Portfolio v1</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="project-v2.html">Portfolio v2</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="project-v3.html">Portfolio v3</a>
+                 </li>
+              </ul>
+           </li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#">Team</a>
+              <ul class="submenu">
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#">Team Archive</a>
+                    <ul class="submenu">
+                       <li class="menu-item">
+                          <a href="team-archive-v1.html">Archive v1</a>
+                       </li>
+                       <li class="menu-item">
+                          <a href="team-archive-v2.html">Archive v2</a>
+                       </li>
+                    </ul>
+                 </li>
+                 <li class="menu-item">
+                    <a href="team-details.html">Team Detail</a>
+                 </li>
+              </ul>
+           </li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#">Services</a>
+              <ul class="submenu">
+                 <li class="menu-item">
+                    <a href="services-v1.html">Service v1</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="services-v2.html">Service v2</a>
+                 </li>
+              </ul>
+           </li>
+           <li class="menu-item menu-item-has-children">
+              <a href="#">User</a>
+              <ul class="submenu">
+                 <li class="menu-item">
+                    <a href="profile.html">My Account</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="profile-orders.html">My Orders</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="profile-products.html">My Products</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="profile-saved-products.html">Saved Products</a>
+                 </li>
+              </ul>
+           </li>
+           <!-- Pages End -->
+           <!-- Social Media Start -->
+           <li class="menu-section-title">Get Social</li>
+           <li class="menu-item"> <a href="#"> <i class="flaticon-facebook"></i>Facebook</a> </li>
+           <li class="menu-item"> <a href="#"> <i class="flaticon-linkedin"></i> Linkedin </a> </li>
+           <li class="menu-item"> <a href="#"> <i class="flaticon-twitter"></i> Twitter </a> </li>
+           <li class="menu-item"> <a href="#"> <i class="flaticon-instagram"></i> Instagram </a> </li>
+           <!-- Social Media End -->
+        </ul>
+     </div>
+  </aside>
+  <div class="aside-overlay aside-trigger"></div>
+
+  <!-- Header Start -->
+  <header class="main-header header-fw">
+
+    <!-- Top Header Start -->
+    <div class="top-header">
+      <div class="top-header-inner">
+
+        <ul class="social-media">
+          <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+          <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+          <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+          <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+        </ul>
+
+        <ul class="top-header-nav">
+          <li> <a href="{% url 'login' %}"> Login</a> </li>
+          <li>or</li>
+          <li> <a href="{% url 'signup' %}"> Signup</a> </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Top Header End -->
+
+    <nav class="navbar">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html"> <img src="https://i.imgur.com/rCAhTJa.png" class="img-fluid" alt="FlyHigh NYC" style="width: 65%; border-radius: 25%;"> </a>
+      <!-- Merijuana -->
+      <ul class="navbar-nav">
+        <!-- Pages Start -->
+        <li class="menu-item menu-item-has-children">
+          <a href="#"> Home Pages</a>
+          <ul class="submenu">
+            <li class="menu-item"> <a href="index.html">Home v1</a> </li>
+            <li class="menu-item"> <a href="home-v2.html">Home v2</a> </li>
+            <li class="menu-item"> <a href="home-v3.html">Home v3</a> </li>
+            
+          </ul>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a href="#">Shop</a>
+          <ul class="submenu">
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Shop</a>
+              <ul class="submenu">
+                <li class="menu-item">
+                  <a href="shop-list-v1.html">Grid View</a>
+                </li>
+                <li class="menu-item">
+                  <a href="shop-list-v1.html">List v1</a>
+                </li>
+                <li class="menu-item">
+                  <a href="shop-list-v2.html">List v2</a>
+                </li>
+                <li class="menu-item">
+                  <a href="shop-map.html">Shop Map</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Product Details</a>
+              <ul class="submenu">
+                <li class="menu-item">
+                  <a href="product-details-v1.html">Product Details v1</a>
+                </li>
+                <li class="menu-item">
+                  <a href="product-details-v2.html">Product Details v2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="cart.html">Cart</a>
+            </li>
+            <li class="menu-item">
+              <a href="checkout.html">Checkout</a>
+            </li>
+            <li class="menu-item">
+              <a href="wishlist.html">Wishlist</a>
+            </li>
+            <li class="menu-item">
+              <a href="compare-products.html">Compare Products</a>
+            </li>
+            <li class="menu-item">
+              <a href="submit-product.html">Submit Product</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a href="#">Pages</a>
+          <ul class="submenu">
+            <li class="menu-item">
+              <a href="about-us.html">About Us</a>
+            </li>
+            <li class="menu-item">
+              <a href="contact-us.html">Contact Us</a>
+            </li>
+            <li class="menu-item">
+              <a href="legal.html">Legal</a>
+            </li>
+            <li class="menu-item">
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li class="menu-item">
+              <a href="coming-soon.html">Coming Soon</a>
+            </li>
+            <li class="menu-item">
+              <a href="404.html">404</a>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Login</a>
+              <ul class="submenu">
+                <li class="menu-item">
+                  <a href="login-v1.html">Login v1</a>
+                </li>
+                <li class="menu-item">
+                  <a href="login-v2.html">Login v2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Register</a>
+              <ul class="submenu">
+                <li class="menu-item">
+                  <a href="register-v1.html">Register v1</a>
+                </li>
+                <li class="menu-item">
+                  <a href="register-v2.html">Register v2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a href="#">Blog</a>
+          <ul class="submenu">
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Blog Archive</a>
+              <ul class="submenu">
+                <li class="menu-item">
+                  <a href="blog-left-sidebar.html">Left Sidebar</a>
+                </li>
+                <li class="menu-item">
+                  <a href="blog-right-sidebar.html">Right Sidebar</a>
+                </li>
+                <li class="menu-item">
+                  <a href="blog-grid.html">Grid View</a>
+                </li>
+                <li class="menu-item">
+                  <a href="blog-list.html">List View</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="blog-single.html">Blog Single</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a href="#">Portfolio</a>
+          <ul class="submenu">
+            <li class="menu-item">
+              <a href="project-v1.html">Portfolio v1</a>
+            </li>
+            <li class="menu-item">
+              <a href="project-v2.html">Portfolio v2</a>
+            </li>
+            <li class="menu-item">
+              <a href="project-v3.html">Portfolio v3</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a href="#">Team</a>
+          <ul class="submenu">
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Team Archive</a>
+              <ul class="submenu">
+                <li class="menu-item">
+                  <a href="team-archive-v1.html">Archive v1</a>
+                </li>
+                <li class="menu-item">
+                  <a href="team-archive-v2.html">Archive v2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="team-details.html">Team Detail</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a href="#">Services</a>
+          <ul class="submenu">
+            <li class="menu-item">
+              <a href="services-v1.html">Service v1</a>
+            </li>
+            <li class="menu-item">
+              <a href="services-v2.html">Service v2</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a href="#">User</a>
+          <ul class="submenu">
+            <li class="menu-item">
+              <a href="profile.html">My Account</a>
+            </li>
+            <li class="menu-item">
+              <a href="profile-orders.html">My Orders</a>
+            </li>
+            <li class="menu-item">
+              <a href="profile-products.html">My Products</a>
+            </li>
+            <li class="menu-item">
+              <a href="profile-saved-products.html">Saved Products</a>
+            </li>
+          </ul>
+        </li>
+        <!-- Pages End -->
+      </ul>
+
+      <div class="header-controls">
+        <ul class="header-controls-inner d-none d-lg-flex">
+          <li>
+            <a href="{% url 'menu' %}" class="btn-custom primary">Shop now</a>
+          </li>
+        </ul>
+        <!-- Toggler -->
+        <div class="aside-toggler aside-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+    </nav>
+
+  </header>
+  <!-- Header End -->
+
+  <div class="section login-style-2">
+    <div class="container">
+      <div class="acr-auth-container">
+    <div class="acr-auth-content">
+
+      <form method="POST">{% csrf_token %}
+
+        <div class="auth-text">
+          <h3>Sign up</h3>
+          <p>By signing up and completing our ID verification, you'll be able to order recreational and medical marijuana within the matter of minutes!</p>
+        </div>
+
+        {% if messages %}
+          <ul class="messages">
+          {% for message in messages %}
+            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+          {% endfor %}
+          </ul>
+        {% endif %}
+
+        <!-- {{ form|crispy }} -->
+        <div class="form-group">
+          <input type="text" class="form-control form-control-light" placeholder="Your Name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" class="form-control form-control-light" placeholder="Email Address" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="password" class="form-control form-control-light" placeholder="Password" name="password1" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="password" class="form-control form-control-light" placeholder="Confirm Password" name="password2" required>
+        </div>
+        <button type="submit" class="btn-custom secondary btn-block">Register</button>
+        <div class="auth-seperator">
+          <span>OR</span>
+        </div>
+        <div class="social-login">
+          <button type="button" class="acr-social-login facebook"><i class="fab fa-facebook-f"></i> Continue with Facebook </button>
+          <button type="button" class="acr-social-login google"><i class="fab fa-google"></i> Continue with Google</button>
+        </div>
+        <p class="text-center mb-0">Already have an account? <a href="{% url 'login' %}">Login</a> </p>
+
+      </form>
+    </div>
+    <div class="acr-auth-bg bg-cover bg-center dark-overlay dark-overlay-2" style="background-image: url('https://www.sociedelic.com/wp-content/uploads/2017/03/girl-sharing-weed-min.jpg')">
+      <div class="acr-auth-inner">
+        <h3>Welcome to FlyHigh!</h3>
+        <p style="font-size: 25px;">Want a hit?</p>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+<!-- Sidebar Start -->
+<div class="sidebar-wrapper">
+
+    <div class="sidebar-overlay toggle-aside"></div>
+    <aside class="sidebar">
+      <div class="aside-scroll">
+
+        <div class="aside-section">
+          <span class="aside-title">Recommended</span>
+
+          <!-- Recommended Channels Start -->
+          <ul class="recommended-channels">
+            {% if not projects %}
+              <p style="margin-left: 5%;">No Projects to display.</p>
+            {% endif %}
+            {% for project in projects %}
+              <li class="live">
+                <a class="media" href="{% url 'projdetail' project.slug %}">
+                  <img src="https://atilogri.sirv.com/Images/org.jpeg?text={{project.name.0}}&text.size=30&text.color=EBC76D&text.position=center" style="width: 45px; height: 45px;" alt="channel">
+                  <div class="media-body">
+                    <h6>{{project.name}}</h6>
+                  {% if not user.company %}
+                    <span>ArchRack</span>
+                  {% else %}
+                    <span>{{user.company}}</span>
+                  {% endif %}
+                  </div>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <div class="aside-button">
+            <a href="#" class="btn-custom secondary">View More</a>
+          </div>
+          <!-- Recommended Channels End -->
+
+        </div>
+
+        <div class="aside-section">
+          <span class="aside-title">Helpful Links</span>
+
+          <ul class="aside-menu">
+            <li> <a href="about-us.html"><i class="fas fa-address-card"></i> About Us</a> </li>
+            <li> <a href="help-center.html"><i class="fas fa-question-circle"></i> Help Center</a> </li>
+            <li> <a href="my-channel-settings.html"><i class="fas fa-cog"></i> Settings</a> </li>
+            <li> <a href="legal.html"><i class="fas fa-balance-scale"></i> Legal</a> </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+  <!-- Sidebar End -->

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchRack</title>
+  {% load static %}
+  <!-- Vendor Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- Vidlife Style sheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon.ico' %}">
+
+</head>
+
+<body class="boxed">
+
+  <!-- Main Wrapper Start -->
+  <div class="main-wrapper">
+
+    <!-- Nav Start -->
+    {% include 'app/partials/navbar.html' %}
+    <!-- Nav End -->
+
+    <!-- Sidebar Start -->
+    {% include 'app/partials/sidebar.html' %}
+    <!-- Sidebar End -->
+
+    <!-- Content Start -->
+    <div class="main-content">
+
+      <!-- Inner Banner Start -->
+      <div class="page-subheader">
+        <div class="page-subheader-inner bg-center bg-parallax dark-overlay" style="background-image: url('https://via.placeholder.com/1920x800')">
+          <h1>Entertainment</h1>
+        </div>
+        <div class="page-subheader-controls filter">
+          <div class="page-subheader-controls-inner">
+
+            <div class="toggle-view">
+              <span class="toggle-grid" data-toggle="tooltip" title="Toggle Grid"> <i class="fas fa-th-large"></i> </span>
+              <span class="toggle-list" data-toggle="tooltip" title="Toggle List"> <i class="fas fa-th-list"></i> </span>
+            </div>
+
+            <div class="dropdown">
+              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-plus"></i> Create</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="{% url 'newdoc' %}">New RackDoc</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-sort"></i> Sort By</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Popularity</a>
+                <a class="dropdown-item" href="#">Most viewed</a>
+                <a class="dropdown-item" href="#">Date added (oldest)</a>
+                <a class="dropdown-item" href="#">Date added (newest)</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Banner End -->
+      
+      <div class="main-content-inner">
+
+        {% for doc in docs %}
+          <a href="{% url 'docdetail' doc.slug %}"><div class="page2">
+            <b>{{doc.name}}</b>
+            <font size="1">{{doc.content|safe|truncatewords:5}}</font>
+            <b><button class="btn btn-primary" id="boton"><i class="far fa-edit"></i></button></b>
+          </div></a>
+          
+        {% endfor %}
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-md-9">
+                <img src="https://via.placeholder.com/192x59" alt="logo">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copyright">Made with <i class="fas fa-heart"></i> by AndromedaThemes</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-media">
+                  <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+
+      </div>
+
+    </div>
+    <!-- Content End -->
+
+  </div>
+  <!-- Main Wrapper End -->
+
+  <style>
+    .page2 {
+      /* position: absolute; */
+      width: 220px;
+      height: 200px;
+      padding: 10px;
+      border-radius: 10%;
+      /* left: 49.5%; */
+      /* margin: 1250px 0 50px -410px; */
+      background-color: white;
+      box-shadow: 0 0 5px grey;
+    }
+    #boton {
+      visibility: hidden;
+      margin-top: -100%;
+      margin-left: 30%;
+      opacity: 5;
+    }
+    .page2:hover {
+      /* visibility: visible; */
+      /* opacity: 0.5;
+      transition: 1s; */
+      cursor: pointer;
+    } 
+    .page2:hover #boton {
+        /* opacity: 1; */
+        transition: 2.5s;
+        visibility: visible;
+        transition: visibility 0s linear 0s, opacity 300ms;
+      }
+  </style>
+  <!-- Vendor Scripts -->
+  <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+
+  <!-- Vidlife Scripts -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

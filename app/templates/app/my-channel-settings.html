@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchRack</title>
+  {% load static %}
+  <!-- Vendor Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+
+  <!-- Vidlife Style sheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon.ico' %}">
+
+</head>
+
+<body class="boxed">
+
+  <!-- Main Wrapper Start -->
+  <div class="main-wrapper">
+
+    <!-- Nav Start -->
+    {% include 'app/partials/navbar.html' %}
+    <!-- Nav End -->
+
+    <!-- Sidebar Start -->
+    {% include 'app/partials/sidebar.html' %}
+    <!-- Sidebar End -->
+
+    <!-- Content Start -->
+    <div class="main-content">
+
+      <!-- Inner Banner Start -->
+      <div class="page-subheader">
+        <div class="page-subheader-inner" style="background-image: url('https://via.placeholder.com/1920x800')"></div>
+        <div class="page-subheader-controls">
+          <div class="page-subheader-controls-inner">
+            <div class="channel-thumbnail">
+              <img src="https://via.placeholder.com/150" alt="channel">
+            </div>
+
+            <div class="page-subheader-left page-subheader-nav">
+              <ul>
+                <li> <a href="my-channel.html">Home</a> </li>
+                <li> <a href="my-channel-videos.html">Videos</a> </li>
+                <li> <a href="my-channel-playlists.html">Playlists</a> </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="my-channel-about.html"> <i class="fas fa-address-card"></i> About</a>
+                    <a class="dropdown-item" href="my-channel-subscribers.html"> <i class="fas fa-list"></i> Subscribers</a>
+                    <a class="dropdown-item" href="my-channel-watch-later.html"> <i class="fas fa-stopwatch"></i> Watch Later</a>
+                    <a class="dropdown-item" href="my-channel-history.html"> <i class="fas fa-history"></i> History</a>
+                    <a class="dropdown-item" href="my-channel-settings.html"> <i class="fas fa-cog"></i> Settings</a>
+                    <a class="dropdown-item" href="my-channel-account.html"> <i class="fas fa-user"></i> Account Management</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="page-subheader-right">
+              <ul class="social-media">
+                <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
+              </ul>
+              <a href="#" class="btn-custom secondary"> <i class="fas fa-upload"></i> Upload</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Banner End -->
+
+      <div class="main-content-inner">
+
+        <div class="section section-mobile border-0">
+          <div class="row">
+
+            <div class="col-lg-4">
+              <div class="page-options">
+                <h3>Settings</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card settings-card">
+                <div class="card-body">
+
+                  <div class="section-title-wrap">
+                    <h4>Notifications</h4>
+                  </div>
+
+                  <form method="post">
+
+                    <!-- Notification Group Start -->
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Your Preferences</label>
+                      <div class="col-sm-9">
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting1">
+                            <label class="custom-control-label" for="setting1"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Subscriptions</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
+                          </div>
+                        </div>
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting2">
+                            <label class="custom-control-label" for="setting2"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Recommended videos</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                          </div>
+                        </div>
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting3">
+                            <label class="custom-control-label" for="setting3"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Channel activity</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
+                          </div>
+                        </div>
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting4">
+                            <label class="custom-control-label" for="setting4"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Comment activity</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- Notification Group End -->
+
+                    <!-- Notification Group Start -->
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Email Notifications</label>
+                      <div class="col-sm-9">
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting5">
+                            <label class="custom-control-label" for="setting5"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Send activity emails</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</span>
+                          </div>
+                        </div>
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting6">
+                            <label class="custom-control-label" for="setting6"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Send channel updates</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- Notification Group End -->
+
+                  </form>
+
+                </div>
+              </div>
+
+              <div class="card settings-card mb-0">
+                <div class="card-body">
+
+                  <div class="section-title-wrap">
+                    <h4>Privacy</h4>
+                  </div>
+
+                  <form method="post">
+
+                    <!-- Notification Group Start -->
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Playlists & subscriptions</label>
+                      <div class="col-sm-9">
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting7">
+                            <label class="custom-control-label" for="setting7"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Keep saved playlists private</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</span>
+                          </div>
+                        </div>
+
+                        <div class="setting-item">
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="setting8">
+                            <label class="custom-control-label" for="setting8"></label>
+                          </div>
+                          <div class="setting-item-description">
+                            <h6>Keep my subscriptions private</h6>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- Notification Group End -->
+
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-md-9">
+                <img src="https://via.placeholder.com/192x59" alt="logo">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copyright">Made with <i class="fas fa-heart"></i> by AndromedaThemes</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-media">
+                  <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+
+      </div>
+
+    </div>
+    <!-- Content End -->
+
+  </div>
+  <!-- Main Wrapper End -->
+
+  <!-- Vendor Scripts -->
+  <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+
+  <!-- Vidlife Scripts -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchRack</title>
+  {% load static %}
+  <!-- Vendor Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+
+  <!-- Vidlife Style sheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon.ico' %}">
+
+</head>
+
+<body class="boxed">
+
+  <!-- Main Wrapper Start -->
+  <div class="main-wrapper">
+
+    <!-- Nav Start -->
+    {% include 'app/partials/navbar.html' %}
+    <!-- Nav End -->
+
+    <!-- Sidebar Start -->
+    {% include 'app/partials/sidebar.html' %}
+    <!-- Sidebar End -->
+
+    <!-- Content Start -->
+    <div class="main-content">
+
+      <!-- Inner Banner Start -->
+      <div class="page-subheader">
+        <div class="page-subheader-inner bg-center bg-parallax dark-overlay" style="background-image: url('https://via.placeholder.com/1920x800')">
+          <h1>Entertainment</h1>
+        </div>
+        <div class="page-subheader-controls filter">
+          <div class="page-subheader-controls-inner">
+
+            <div class="toggle-view">
+              <span class="toggle-grid" data-toggle="tooltip" title="Toggle Grid"> <i class="fas fa-th-large"></i> </span>
+              <span class="toggle-list" data-toggle="tooltip" title="Toggle List"> <i class="fas fa-th-list"></i> </span>
+            </div>
+
+            <div class="dropdown">
+              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-sort"></i> Sort By</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Popularity</a>
+                <a class="dropdown-item" href="#">Most viewed</a>
+                <a class="dropdown-item" href="#">Date added (oldest)</a>
+                <a class="dropdown-item" href="#">Date added (newest)</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Banner End -->
+
+      <div class="main-content-inner">
+
+        <!-- Videos Start -->
+        <div class="row">
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">3:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">BFX Riding on the mounts - GoPro video</a> </h6>
+                    <a class="video-author" href="single-channel.html"><i class="fas fa-check-double"></i> Jonathan Puck</a>
+                    <div class="video-meta">
+                      <span>14k views</span>
+                      <span>2 weeks ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">4:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Tomorrow land music festival sneak peek</a> </h6>
+                    <a class="video-author" href="single-channel.html"><i class="fas fa-check-double"></i> Laila Manchy</a>
+                    <div class="video-meta">
+                      <span>12k views</span>
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">12:13</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">4K Timelapse of sundown on the beach</a> </h6>
+                    <a class="video-author" href="single-channel.html"> Sicily Brandy</a>
+                    <div class="video-meta">
+                      <span>244k views</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">64:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Music remix livestream - 24 hours stream</a> </h6>
+                    <a class="video-author" href="single-channel.html"><i class="fas fa-check-double"></i>Laila Manchy</a>
+                    <div class="video-meta">
+                      <span>24k views</span>
+                      <span>3 days ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">3:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">How to properly cook a shrimp noodle dish</a> </h6>
+                    <a class="video-author" href="single-channel.html">Daily Cooking</a>
+                    <div class="video-meta">
+                      <span>67k views</span>
+                      <span>2 weeks ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">4:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Revolutionizing the luxurious crab dish</a> </h6>
+                    <a class="video-author" href="single-channel.html">Daily Cooking</a>
+                    <div class="video-meta">
+                      <span>14k views</span>
+                      <span>2 weeks ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">8:38</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Learn how to submit forms with AJAX</a> </h6>
+                    <a class="video-author" href="single-channel.html">Mikayla Yonder</a>
+                    <div class="video-meta">
+                      <span>13k views</span>
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">3:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Developing real world web apps with Python</a> </h6>
+                    <a class="video-author" href="single-channel.html">Mikayla Yonder</a>
+                    <div class="video-meta">
+                      <span>66k views</span>
+                      <span>2 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">3:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Huawei to stop using android in early 2020</a> </h6>
+                    <a class="video-author" href="single-channel.html"><i class="fas fa-check-double"></i> Live News One</a>
+                    <div class="video-meta">
+                      <span>138k views</span>
+                      <span>3 hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">3:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Nintendo's news about the Nintendo Switch</a> </h6>
+                    <a class="video-author" href="single-channel.html">Jumpy Joe</a>
+                    <div class="video-meta">
+                      <span>14k views</span>
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">42:31</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Night livestream - Pool with the champs</a> </h6>
+                    <a class="video-author" href="single-channel.html">Jumpy Joe</a>
+                    <div class="video-meta">
+                      <span>3k views</span>
+                      <span>1 week ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+          <!-- Video Start -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="video">
+              <div class="video-thumbnail">
+                <div class="video-thumbnail-inner">
+                  <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                  <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                    <i class="fas fa-stopwatch"></i>
+                  </a>
+                  <a href="single-video.html" class="play-btn">
+                    <i class="fas fa-play"></i>
+                  </a>
+                  <span class="video-duration">3:26</span>
+                </div>
+              </div>
+              <div class="video-content">
+                <div class="media">
+                  <a href="single-channel.html"><img src="https://via.placeholder.com/70" alt="channel"></a>
+                  <div class="media-body">
+                    <h6> <a href="#">Testing the latest VR by Andromeda</a> </h6>
+                    <a class="video-author" href="single-channel.html">Jumpy Joe</a>
+                    <div class="video-meta">
+                      <span>14k views</span>
+                      <span>3 days ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video End -->
+
+        </div>
+        <!-- Videos End -->
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-md-9">
+                <img src="https://via.placeholder.com/192x59" alt="logo">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copyright">Made with <i class="fas fa-heart"></i> by AndromedaThemes</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-media">
+                  <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+
+      </div>
+
+    </div>
+    <!-- Content End -->
+
+  </div>
+  <!-- Main Wrapper End -->
+
+  <!-- Vendor Scripts -->
+  <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+
+  <!-- Vidlife Scripts -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

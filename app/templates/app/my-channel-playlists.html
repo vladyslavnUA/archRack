@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchRack</title>
+  {% load static %}
+  <!-- Vendor Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+
+  <!-- Vidlife Style sheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon.ico' %}">
+
+</head>
+
+<body class="boxed">
+
+  <!-- Main Wrapper Start -->
+  <div class="main-wrapper">
+
+    <!-- Nav Start -->
+    {% include 'app/partials/navbar.html' %}
+    <!-- Nav End -->
+
+    <!-- Sidebar Start -->
+    {% include 'app/partials/sidebar.html' %}
+    <!-- Sidebar End -->
+
+    <!-- Content Start -->
+    <div class="main-content">
+
+      <!-- Inner Banner Start -->
+      <div class="page-subheader">
+        <div class="page-subheader-inner" style="background-image: url('https://via.placeholder.com/1920x800')"></div>
+        <div class="page-subheader-controls">
+          <div class="page-subheader-controls-inner">
+            <div class="channel-thumbnail">
+              <img src="https://via.placeholder.com/150" alt="channel">
+            </div>
+
+            <div class="page-subheader-left page-subheader-nav">
+              <ul>
+                <li> <a href="my-channel.html">Home</a> </li>
+                <li> <a href="my-channel-videos.html">Videos</a> </li>
+                <li> <a class="active" href="my-channel-playlists.html">Playlists</a> </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="my-channel-about.html"> <i class="fas fa-address-card"></i> About</a>
+                    <a class="dropdown-item" href="my-channel-subscribers.html"> <i class="fas fa-list"></i> Subscribers</a>
+                    <a class="dropdown-item" href="my-channel-watch-later.html"> <i class="fas fa-stopwatch"></i> Watch Later</a>
+                    <a class="dropdown-item" href="my-channel-history.html"> <i class="fas fa-history"></i> History</a>
+                    <a class="dropdown-item" href="my-channel-settings.html"> <i class="fas fa-cog"></i> Settings</a>
+                    <a class="dropdown-item" href="my-channel-account.html"> <i class="fas fa-user"></i> Account Management</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="page-subheader-right">
+              <ul class="social-media">
+                <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
+              </ul>
+              <a href="#" class="btn-custom secondary"> <i class="fas fa-upload"></i> Upload</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Banner End -->
+
+      <div class="main-content-inner">
+
+        <!-- Playlist Start -->
+        <div class="section section-mobile border-0">
+
+          <div class="section-title-wrap">
+            <div class="section-title">
+              <h3>My music collection</h3>
+            </div>
+            <div class="section-controls">
+              <a href="#">Play All</a>
+              <div class="arrows">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-xl-3 col-lg-4 d-none d-lg-block">
+              <div class="card playlist-card">
+                <div class="card-header">
+                  <div class="playlist-thumb" style="background-image: url('https://via.placeholder.com/640x390')">
+                    <a href="#"><img src="https://via.placeholder.com/150" alt="playlist"></a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="playlist-meta">
+                    <h5>2020 Remix</h5>
+                    <span>12 videos</span>
+                  </div>
+                  <div class="playlist-info">
+                    <a href="#" class="btn-custom btn-block"> <i class="fas fa-play"></i> Play All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-9 col-lg-8">
+              <div class="swiper-container playlist-slider">
+                <div class="video-slider swiper-wrapper">
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">3:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Testing the latest VR by Andromeda</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>14k views</span>
+                              <span>3 days ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">64:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Music remix livestream - 24 hours stream</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>24k views</span>
+                              <span>3 days ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">3:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">BFX Riding on the mounts - GoPro video</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>14k views</span>
+                              <span>2 weeks ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">3:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">How to properly cook a shrimp noodle dish</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>67k views</span>
+                              <span>2 weeks ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">4:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Revolutionizing the luxurious crab dish</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>14k views</span>
+                              <span>2 weeks ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">4:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Tomorrow land music festival sneak peek</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>12k views</span>
+                              <span>1 week ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">12:13</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">4K Timelapse of sundown on the beach</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>244k views</span>
+                              <span>2 days ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Playlist End -->
+
+        <!-- Playlist Start -->
+        <div class="section">
+
+          <div class="section-title-wrap">
+            <div class="section-title">
+              <h3>Around the world</h3>
+            </div>
+            <div class="section-controls">
+              <a href="#">Play All</a>
+              <div class="arrows">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-xl-3 col-lg-4 d-none d-lg-block">
+              <div class="card playlist-card">
+                <div class="card-header">
+                  <div class="playlist-thumb" style="background-image: url('https://via.placeholder.com/640x390')">
+                    <a href="#"><img src="https://via.placeholder.com/150" alt="playlist"></a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="playlist-meta">
+                    <h5>To The Netherlands</h5>
+                    <span>24 videos</span>
+                  </div>
+                  <div class="playlist-info">
+                    <a href="#" class="btn-custom btn-block"> <i class="fas fa-play"></i> Play All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="swiper-container playlist-slider">
+                <div class="video-slider swiper-wrapper">
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">3:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Testing the latest VR by Andromeda</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>14k views</span>
+                              <span>3 days ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">64:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Music remix livestream - 24 hours stream</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>24k views</span>
+                              <span>3 days ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">3:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">BFX Riding on the mounts - GoPro video</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>14k views</span>
+                              <span>2 weeks ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">3:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Cooking a shimp noodle dish</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>67k views</span>
+                              <span>2 weeks ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">4:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Revolutionizing the luxurious crab dish</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>14k views</span>
+                              <span>2 weeks ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">4:26</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">Tomorrow land music festival sneak peek</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>12k views</span>
+                              <span>1 week ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+                  <!-- Video Start -->
+                  <div class="swiper-slide">
+                    <div class="video">
+                      <div class="video-thumbnail">
+                        <div class="video-thumbnail-inner">
+                          <a href="single-video.html"><img src="https://via.placeholder.com/660x600" alt="video"></a>
+                          <a href="#" class="video-control watch-later-btn" data-toggle="tooltip" title="Watch Later">
+                            <i class="fas fa-stopwatch"></i>
+                          </a>
+                          <a href="single-video.html" class="play-btn">
+                            <i class="fas fa-play"></i>
+                          </a>
+                          <span class="video-duration">12:13</span>
+                        </div>
+                      </div>
+                      <div class="video-content">
+                        <div class="media">
+                          <div class="media-body">
+                            <h6> <a href="#">4K Timelapse of sundown on the beach</a> </h6>
+                            <a class="video-author" href="single-channel.html">Jonathan Puck</a>
+                            <div class="video-meta">
+                              <span>244k views</span>
+                              <span>2 days ago</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Video End -->
+
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Playlist End -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-md-9">
+                <img src="https://via.placeholder.com/192x59" alt="logo">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copyright">Made with <i class="fas fa-heart"></i> by AndromedaThemes </p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-media">
+                  <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                  <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+
+      </div>
+
+    </div>
+    <!-- Content End -->
+
+  </div>
+  <!-- Main Wrapper End -->
+
+  <!-- Vendor Scripts -->
+  <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+
+  <!-- Vidlife Scripts -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

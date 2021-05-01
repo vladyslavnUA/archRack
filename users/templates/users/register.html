@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchRack</title>
+  {% load static %}
+  {% load crispy_forms_tags %}
+  <!-- Vendor Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+  <!-- Vidlife Style sheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+
+</head>
+
+<body class="boxed">
+  <script type="text/javascript">
+    window.onload = function() {
+      var pass1 = document.getElementById('id_password1')
+      var pass2 = document.getElementById('id_password2')
+      var name = document.getElementById('id_name')
+      var email = document.getElementById('id_email')
+      var image = document.getElementById('id_image_url')
+      var main = document.getElementById('id_main')
+      var comp = document.getElementById('id_company')
+      var role = document.getElementById('id_role')
+
+      pass1.classList.add("form-control")
+      pass1.classList.add("form-control-light")
+      name.classList.add("form-control")
+      email.classList.add("form-control")
+      image.classList.add("form-control")
+      main.classList.add("form-control")
+      comp.classList.add("form-control")
+      role.classList.add("form-control")
+      name.classList.add("form-control-light")
+      email.classList.add("form-control-light")
+      image.classList.add("form-control-light")
+      main.classList.add("form-control-light")
+      comp.classList.add("form-control-light")
+      role.classList.add("form-control-light")
+      name.placeholder = "Mick Jagger"
+      email.placeholder = "mick@stones.com"
+      image.placeholder = "https://www.website.com"
+      // main.placeholder = "Confirm Password"
+      comp.placeholder = "The Rolling Stones"
+      role.placeholder = "Your Role"
+      pass1.placeholder = "Password"
+      pass2.classList.add("form-control")
+      pass2.classList.add("form-control-light")
+      pass2.placeholder = "Confirm Password"
+    }
+  </script>
+  <!-- Main Wrapper Start -->
+  <div class="main-wrapper">
+
+    <!-- Nav Start -->
+    <!-- <div class="nav-wrapper">
+
+      <div class="navbar-logo">
+
+        <div class="aside-toggler toggle-aside">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="index.html">
+          <img src="https://via.placeholder.com/192x59" alt="logo">
+        </a>
+
+      </div>
+
+      <div class="navbar-menu">
+        <ul>
+          <li> <a href="index.html"> Explore </a> </li>
+          <li> <a href="browse.html"> Browse </a> </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pages </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="my-channel.html">Channel</a>
+              <a class="dropdown-item" href="video-list.html">Video List</a>
+              <a class="dropdown-item" href="membership.html">Membership</a>
+              <a class="dropdown-item" href="login.html">Login</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-controls">
+        <ul>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-user"></i> </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header dropdown-header-lg">
+                <div class="media user-info">
+                  <img src="https://via.placeholder.com/70" alt="user">
+                  <div class="media-body">
+                    <h6>User 9389</h6>
+                    <span class="fw-400">Guest</span>
+                  </div>
+                </div>
+              </div>
+              <a class="dropdown-item" href="login.html"><i class="far fa-user"></i> Login <span><i class="fas fa-chevron-right"></i></span> </a>
+              <a class="dropdown-item" href="register.html"><i class="far fa-user"></i> Register <span><i class="fas fa-chevron-right"></i></span> </a>
+              <div class="dropdown-item dark-mode-toggle">
+                <i class="far fa-moon"></i> Dark Mode
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1"></label>
+                </div>
+              </div>
+              <div class="dropdown-divider">
+              </div>
+              <a class="dropdown-item" href="help-center.html"><i class="far fa-question-circle"></i> Help <span><i class="fas fa-chevron-right"></i></span> </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div> -->
+    <!-- Nav End -->
+
+    <!-- Content Start -->
+    <div class="main-content no-sidebar">
+      <div class="main-content-inner">
+
+        <!-- Login Form Start -->
+        <div class="section-padding">
+
+          <div class="auth-wrapper">
+
+            <div class="auth-description">
+              <div class="auth-description-inner">
+                <img src="https://www.kindpng.com/picc/m/21-214439_free-high-quality-person-icon-default-profile-picture.png" style="width: 250px; margin-bottom: 10%;" alt="" id="myimg">
+                <h2>Hello World!</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <a href="{% url 'login' %}" class="btn-custom">Sign In</a>
+              </div>
+            </div>
+            <div class="auth-form">
+
+              <h2 class="custom-primary">Create Vidlife Account</h2>
+              {% if messages %}
+                <ul class="messages">
+                {% for message in messages %}
+                  <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+                </ul>
+              {% endif %}
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <!-- {{form|crispy}} -->
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="name"><i class="far fa-user"></i></label>
+                      {{form.name}}
+                      <!-- <input type="text" class="form-control form-control-light" placeholder="Mick Jagger" name="name" id="name" value="" required> -->
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="email"><i class="far fa-envelope"></i></label>
+                      {{form.email}}
+                      <!-- <input type="email" class="form-control form-control-light" placeholder="mick@stones.com" name="email" value="" required> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="image_url"><i class="fas fa-camera-retro"></i></label>
+                      {{form.image_url}}
+                      <!-- <input type="url" class="form-control form-control-light" placeholder="https://www.website.come/image.jpg" name="image_url" id="image_url" value=""> -->
+                    </div>
+                  </div>
+                  OR
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="main"><i class="fas fa-desktop"></i></label>
+                      {{form.main}}
+                      <!-- <input type="file" accept="image/png, image/jpeg, image/jpg, image/*" class="form-control form-control-light" placeholder="" name="main" id="main" value=""> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="company"><i class="far fa-building"></i></label>
+                      {{form.company}}
+                      <!-- <input type="text" class="form-control form-control-light" placeholder="The Rolling Stones" name="company" id="company" value=""> -->
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="role"><i class="far fa-address-book"></i></label>
+                      {{form.role}}
+                      <!-- <input type="text" class="form-control form-control-light" placeholder="Your Role" name="role" id="role" value="" required> -->
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="team"><i class="fas fa-users"></i></label>
+                      <input type="text" class="form-control form-control-light" placeholder="Your Team" name="team" id="team" value="">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="pronouns"><i class="fas fa-user-shield"></i></label>
+                      <input type="text" class="form-control form-control-light" placeholder="Your Pronouns" name="pronouns" id="pronouns" value="" required>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="password"><i class="fas fa-key"></i></label>
+                      {{form.password1}}
+                      <!-- <input type="password" class="form-control form-control-light" placeholder="Password" name="password1" id="password" value=""> -->
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="password2"><i class="fas fa-lock"></i></label>
+                      {{form.password2}}
+                      <!-- <input type="password" class="form-control form-control-light" placeholder="Confirm Password" name="password2" id="password2" value=""> -->
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn-custom primary">Sign Up</button>
+
+                <div class="auth-seperator">
+                  <span>OR</span>
+                </div>
+
+                <div class="">
+                  <button type="button" class="vl-social-login facebook"><i class="fab fa-facebook-f"></i> Continue with Facebook </button>
+                  <button type="button" class="vl-social-login google"><i class="fab fa-google"></i> Continue with Google</button>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Login Form End -->
+
+      </div>
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <!-- <footer class="footer footer-2">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-md-9">
+              <img src="https://via.placeholder.com/192x59" alt="logo">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="copyright">Made with <i class="fas fa-heart"></i> by AndromedaThemes</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="social-media">
+                <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                <li> <a href="#"> <i class="fab fa-pinterest-p"></i> </a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <!-- Footer End -->
+
+  </div>
+  <!-- Main Wrapper End -->
+
+  <script>
+  // function preloadFunc()
+  //   {
+  //       alert("PreLoad");
+  //   }
+  //   window.onpaint = preloadFunc();
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              $('#myimg').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+      }
+    }
+    function findURL(input) {
+      document.getElementById('myimg').src = document.getElementById('id_image_url').value
+    // if (input.files && input.files[0]) {
+    //     var reader = new FileReader();
+
+        // reader.onload = function (e) {
+        //   var ok = document.getElementById('myimg')
+        //   ok.src = input;
+        //     // $('#myimg').attr('src', input);
+        //     // e.target.result
+        // }
+
+        // reader.readAsDataURL(input.files[0]);
+        }
+    
+    function dothis() {
+      document.getElementById('myimg').src = document.getElementById('image_url').value
+    }
+
+  $(function () { //document ready call
+      $("#id_main").change(function(){
+          readURL(this);
+      });
+      $("#id_image_url").change(function(){
+          findURL(this);
+      });
+
+  });
+
+  
+  </script>
+
+  <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+
+  <!-- Vidlife Scripts -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

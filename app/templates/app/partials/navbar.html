@@ -1,0 +1,114 @@
+<!-- Nav Start -->
+<div class="nav-wrapper">
+
+    <div class="navbar-logo">
+
+      <div class="aside-toggler toggle-aside">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <a href="{% url 'dashboard' %}">
+        <img src="https://via.placeholder.com/192x59" alt="logo">
+      </a>
+
+    </div>
+
+    <div class="navbar-menu">
+      <ul>
+        <li> <a class="active" href="{% url 'dashboard' %}"> Explore </a> </li>
+        <li> <a href="browse.html"> Browse </a> </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pages </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="my-channel.html">Channel</a>
+            <a class="dropdown-item" href="video-list.html">Video List</a>
+            <a class="dropdown-item" href="membership.html">Membership</a>
+            <a class="dropdown-item" href="login.html">Login</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-search">
+      <form method="post">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for videos, channels..." value="">
+          <div class="input-group-append">
+            <button type="submit" class="btn-custom"> <i class="fas fa-search m-0"></i> </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="navbar-controls">
+      <ul>
+        <li class="dropdown">
+          <a class="pulse-video" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-plus-circle"></i> </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <h6 class="dropdown-header">New</h6>
+            <a class="dropdown-item" href="{% url 'newdoc' %}"><i class="fas fa-file"></i> RackDoc</a>
+            <a class="dropdown-item" href="{% url 'newproj' %}"> <i class="fas fa-folder"></i> New Project</a>
+            <!-- i class: text-danger -->
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-bell"></i> </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <h6 class="dropdown-header">Notifications</h6>
+            <div class="dropdown-scroll">
+              <a class="dropdown-item new-notification" href="#">
+                <div class="media">
+                  <img class="img-sm" src="https://via.placeholder.com/70" alt="channel">
+                  <div class="media-body">
+                    <span class="fs-14"> <b>Just Watch It</b> released a new video </span>
+                    <span>2 hours ago</span>
+                  </div>
+                </div>
+              </a>
+              <a class="dropdown-item new-notification" href="#">
+                <div class="media">
+                  <img class="img-sm" src="https://via.placeholder.com/70" alt="channel">
+                  <div class="media-body">
+                    <span class="fs-14"> <b>Live News One</b>'s livestream ended</span>
+                    <span>6 hours ago</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-user"></i> </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header dropdown-header-lg">
+              <div class="media user-info">
+                <img src="https://via.placeholder.com/70" alt="user">
+                <div class="media-body">
+                  <a href="{% url 'profile' %}"><h6>{{user.name}}</h6></a>
+                  <span class="fw-400">{{user.company}}</span>
+                </div>
+              </div>
+            </div>
+            <a class="dropdown-item" href="{% url 'profile' %}"><i class="far fa-user"></i> My Channel <span><i class="fas fa-chevron-right"></i></span> </a>
+            <a class="dropdown-item" href="membership.html"><i class="far fa-money-bill-alt"></i> Upgrade Plan <span><i class="fas fa-chevron-right"></i></span> </a>
+            <div class="dropdown-item dark-mode-toggle">
+              <i class="far fa-moon"></i> Dark Mode
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1"></label>
+              </div>
+            </div>
+            <div class="dropdown-divider">
+            </div>
+            <a class="dropdown-item" href="{% url 'setting' %}"><i class="fas fa-cog"></i> Settings <span><i class="fas fa-chevron-right"></i></span> </a>
+            <a class="dropdown-item" href="{% url 'helpcenter' %}"><i class="far fa-question-circle"></i> Help <span><i class="fas fa-chevron-right"></i></span> </a>
+            <a class="dropdown-item text-danger" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Sign Out </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- Nav End -->
