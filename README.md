@@ -9,6 +9,7 @@
 
 ##  Tools (current)
 ```
+> Django Crispy Forms  (General)
 > CK-Editor  (Docs)
 > Python  (Backend)
 > Bootstrap/CSS (UI/UX)
